@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { Platform } from '@ionic/angular';
+import {Platform} from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 
@@ -9,6 +9,24 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
   templateUrl: 'app.component.html'
 })
 export class AppComponent {
+  public pages = [
+    {
+      title: 'Home',
+      url: '',
+      icon: 'home'
+    },
+    {
+      title: 'About',
+      url: '/about',
+      icon: 'list'
+    },
+    {
+      title: 'Contact',
+      url: '/contact',
+      icon: 'contact'
+    }
+  ];
+
   constructor(
     private platform: Platform,
     private splashScreen: SplashScreen,
